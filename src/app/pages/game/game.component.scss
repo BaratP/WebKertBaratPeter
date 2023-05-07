@@ -1,0 +1,67 @@
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.main_component {
+  height: 100vh;
+}
+.counting {
+  margin-top: 10px;
+  width: 80%;
+  height: 10%;
+  background: #3f51b4;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+.notCounting {
+  margin-top: 10px;
+  width: 80%;
+  height: 10%;
+  background: #fd4080;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+.notClicked{
+  margin-top: 10px;
+  width: 80%;
+  height: 10%;
+  background: lightgray;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+.notClicked span {
+  color: black;
+}
+span {
+  color: white;
+}
+.spinner {
+  position: fixed;
+  z-index: 999;
+  width: 1em;
+  height: 1em;
+  margin: auto;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+}
+
+.spinner::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}

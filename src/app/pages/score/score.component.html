@@ -1,0 +1,8 @@
+<div class="main_component">
+  <h1>Top 5 player</h1>
+  <ol>
+    <li *ngFor="let obj of scoreObject">
+      {{obj.id}} - {{obj.score}} - {{obj.date | dateFormat}}
+    </li>
+  </ol>
+</div>

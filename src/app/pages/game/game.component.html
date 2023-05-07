@@ -1,0 +1,13 @@
+<div class="main_component">
+  <div [ngClass]="clicked===false ? 'notClicked' : milisecs===0 ? 'notCounting' : 'counting'" (click)="start()">
+    <span *ngIf="clicked===false">Press to start the timer</span>
+    <ng-container [ngSwitch]="true" >
+      <span *ngSwitchCase="milisecs !== 0 && clicked === true">Press "w"</span>
+      <span *ngSwitchCase="milisecs === 0 && clicked === true">Wait for blue...</span>
+    </ng-container>
+  </div>
+  <span *ngIf="milisecs===0&&clicked===true" class="spinner"><mat-spinner></mat-spinner></span>
+  <h1 *ngIf="bestTime!==999999">Best Time: {{bestTime}}ms</h1>
+  <h1 *ngIf="bestTime!==999999">Time: {{reactionTime}}ms</h1>
+</div>
+
